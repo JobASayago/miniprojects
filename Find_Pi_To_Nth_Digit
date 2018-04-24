@@ -1,0 +1,20 @@
+#include "stdafx.h"
+#include <iostream>
+
+#include <iomanip>
+using namespace std;
+
+
+
+int main() 
+	
+{
+	int num;
+	long double pi;
+	pi = acos(-1);
+	cout << "how many decimal places do you need pi to be?";
+	cin >> num;
+	std::cout << std::setprecision(num+1) << pi << endl;
+	
+	return 0;
+}
