@@ -1,0 +1,20 @@
+#include "stdafx.h"
+#include <iostream>
+
+#include <iomanip>
+using namespace std;
+
+
+
+int main() 
+	
+{
+	int num;
+	long double e;
+	e = pow((1+1/100000000.0), 100000000);
+	cout << "how many decimal places do you need e to be?";
+	cin >> num;
+	std::cout << std::setprecision(num+1) << e << endl;
+	
+	return 0;
+}
