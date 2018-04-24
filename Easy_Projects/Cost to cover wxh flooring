@@ -1,0 +1,28 @@
+//Find Cost of Tile to Cover W x H Floor - Calculate the total cost of tile it would take to cover a floor 
+//plan of width and height, using a cost entered by the user.
+
+#include "stdafx.h"
+#include <iostream>
+#include <iomanip>
+#include <string>
+using namespace std;
+
+
+
+int main() 
+	
+{
+	float cost, width, height, total_cost, tile_height, tile_width, tile_dim, dim;
+	cout << "Please insert the cost, width, and height of your tile " << endl;
+	cin >> cost;
+	cin >> tile_height;
+	cin >> tile_width;
+	tile_dim = tile_height * tile_width;
+	cout << "Now please enter the dimensions of the floor " << endl;
+	cin >> width;
+	cin >> height;
+	dim = width * height;
+	total_cost=cost* ceil(dim / tile_dim);
+	cout << "Your total cost will be " <<fixed <<setprecision(2) << total_cost << "$" << endl;
+	return 0;
+}
